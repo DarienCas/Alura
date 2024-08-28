@@ -1,0 +1,243 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    background: #3f5b9a;
+    color: #eadbeb;
+}
+
+/* Header */
+header {
+    display: flex;
+    max-width: 1440px;
+    margin: 25px auto;
+    padding: 15px 50px 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f5b9a;
+}
+
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
+.logos img {
+    height: 70px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #000;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 10px #ff0000,
+                0 0 15px #ff0000,
+                0 0 20px #d900ff;
+    animation: luzrgb 4s linear infinite;
+}
+
+/* Encabezado */
+.encabezado {
+    font-size: 4em;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto 50px;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+.section1,
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f5b9a;
+    border-radius: 35px;
+    padding: 2px;
+    margin-top: 3rem;
+    min-height: 500px;
+    box-shadow: 0 0 10px 7px rgba(28, 18, 54, 0.33);
+}
+
+/* Text Area and Message */
+.text-area,
+.mensaje {
+    resize: none;
+    background: linear-gradient(45deg, #e2eff4, #a7b9c0);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 25px;
+    color: #f3f3f3;
+    width: 92%;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: lowercase;
+    box-shadow: 0 0 10px 7px rgba(28, 18, 54, 0.33);
+    outline: none;
+}
+
+/* Informacion */
+.informacion {
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+/* Subtitulo y Parrafo */
+.contenedor-subtitulo,
+.contenedor-parrafo {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    color: #000;
+}
+
+.contenedor-subtitulo {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.contenedor-parrafo {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Botones */
+.botones,
+.btnc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    margin: 15px;
+    width: 100%;
+}
+
+.btn-desencriptar,
+.btn-encriptar,
+.btn-copiar {
+    background: #80a08e;
+    border: 4px solid rgb(119, 255, 0);
+    box-shadow: 0px 5px 20px #fafafa;
+    border-radius: 24px;
+    color: #fafafa;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.btn-desencriptar:hover,
+.btn-encriptar:hover,
+.btn-copiar:hover {
+    background-color: rgb(119, 255, 0);
+    border: 4px solid #fafafa;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #a2c7d6;
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Iconos */
+.icono-linkedin,
+.icono-github {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Animacion */
+@keyframes luzrgb {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header,
+    main,
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .section1,
+    .section2 {
+        width: 90%;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar,
+    .btn-copiar {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header,
+    main,
+    footer,
+    .copy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1,
+    .section2 {
+        width: 80%;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar,
+    .btn-copiar {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
